@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700;800&display=swap');
+
+/* Mobile design */
+:root {
+	--clr-primary-1: #99b898;
+	--clr-primary-2: #feceab;
+	--clr-primary-3: #ff847c;
+	--clr-primary-4: #e84a5f;
+	--clr-primary-5: #2a363b;
+	--clr-primary-6: rgba(255, 255, 255, 0.4);
+	--ff-primary: "Raleway", sans-serif;
+	--ff-secondary: "Open Sans", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: var(--ff-primary);
+	background-color: #fbe3c9;
+}
+
+header {
+	min-height: 100vh;
+	background-image: url("./images/background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: -400;
+}
+h1,
+h2,
+h3 {
+	color: var(--clr-primary-5);
+	font-weight: 800;
+}
+
+a {
+	text-decoration: none;
+}
+
+.nav-header {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.logo {
+	width: 12%;
+	height: 10%;
+	display: flex;
+	align-content: space-around;
+	margin: auto 2% auto 5%;
+	color: var(--clr-primary-5);
+	visibility: hidden;
+}
+
+.nav-toggle {
+	font-size: 2em;
+	height: 1em;
+	border: none;
+	background-color: rgba(255, 255, 255, 0);
+	margin: auto;
+	color: var(--clr-primary-5);
+	position: absolute;
+	top: 2.5%;
+	left: 45%;
+}
+
+.social {
+	display: flex;
+	list-style-type: none;
+	padding: 0 1em;
+}
+
+.fab {
+	font-size: 1.5em;
+	padding: 6;
+	color: var(--clr-primary-5);
+}
+
+.links-container {
+	height: 0;
+	overflow: hidden;
+	transition: all 0.3s linear;
+	background-color: var(--clr-primary-6);
+}
+
+.show-links {
+	height: 300px;
+}
+
+.links {
+	padding: 0;
+}
+
+.links li {
+	list-style-type: none;
+	padding: 5%;
+	display: flex;
+	justify-content: space-around;
+	font-size: 1.2rem;
+}
+
+.scroll-link {
+	color: var(--clr-primary-5);
+	font-weight: 600;
+	text-transform: capitalize;
+}
+
+.container {
+	background-color: rgba(255, 255, 255, 0.2);
+	padding: 15% 2% 5% 2%;
+}
+.banner {
+	min-height: 80vh;
+	display: grid;
+	place-items: center;
+	text-align: center;
+	padding: 0;
+}
+
+.banner__btn {
+	background-color: var(--clr-primary-4);
+	font-size: 0.8em;
+	border-radius: 7px;
+	border: none;
+	padding: 2% 6%;
+	margin-top: 5%;
+}
+
+.banner__btn a {
+	color: var(--clr-primary-5);
+	font-weight: 600;
+	text-transform: capitalize;
+}
+
+#about,
+#portfolio,
+#skills {
+	height: 80vh;
+}
+
+#portfolio {
+	background-color: whitesmoke;
+}
+
+.section {
+	padding-bottom: 5rem;
+}
+
+.title h2 {
+	letter-spacing: 0.2rem;
+	display: flex;
+	justify-content: center;
+	text-transform: uppercase;
+	padding-top: 1em;
+}
+
+.title span {
+	/* color:teal */
+	padding-left: 3%;
+}
+
+.title p {
+	padding: 2%;
+	text-align: justify;
+	padding: 0 1em;
+}
+
+.about__img {
+	width: 120%;
+	max-width: 1900px;
+	margin-top: 1em;
+}
+
+footer {
+	background: var(--clr-primary-5);
+	padding: 3rem 1rem;
+}
+
+footer p {
+	font-size: 0.8rem;
+	color: whitesmoke;
+	text-align: center;
+	text-transform: capitalize;
+	letter-spacing: var(--spacing);
+	margin-bottom: 0;
+}
