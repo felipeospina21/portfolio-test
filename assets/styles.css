@@ -17,6 +17,7 @@
 *::after {
 	box-sizing: border-box;
 }
+
 body {
 	margin: 0;
 	padding: 0;
@@ -26,11 +27,8 @@ body {
 
 header {
 	min-height: 100vh;
-	/* background-image: url("./images/background.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: -400; */
 }
+
 h1,
 h2,
 h3 {
@@ -152,15 +150,15 @@ a {
 #portfolio,
 #skills {
 	height: 80vh;
+	padding-bottom: 5rem;
+	opacity: 0;
+	transition-property: opacity;
+	transition-duration: 450ms;
+	transition-timing-function: ease-in;
 }
 
 #portfolio {
 	background-color: whitesmoke;
-}
-
-.section {
-	padding-bottom: 5rem;
-	opacity: 1;
 }
 
 .title h2 {
@@ -191,6 +189,28 @@ a {
 	width: 120%;
 	max-width: 1900px;
 	margin-top: 1em;
+}
+
+.top-link {
+	font-size: 1.25rem;
+	position: fixed;
+	bottom: 1rem;
+	right: 5rem;
+	background: var(--clr-primary-4);
+	width: 2rem;
+	height: 2rem;
+	display: grid;
+	place-items: center;
+	border-radius: 5px;
+	color: var(--clr-primary-5);
+	animation: bounce 2s ease-in-out infinite;
+	visibility: hidden;
+	z-index: -100;
+}
+
+.show-link {
+	visibility: visible;
+	z-index: 100;
 }
 
 footer {
