@@ -110,7 +110,8 @@ a {
 }
 
 .container {
-	height: 740px;
+	margin-top: 25%;
+	height: 600px;
 	position: relative;
 	overflow: hidden;
 }
@@ -127,7 +128,7 @@ a {
 
 .banner {
 	text-align: center;
-	padding: 45% 2% 5% 2%;
+	padding: 25% 2% 5% 2%;
 }
 
 .banner__btn {
@@ -138,6 +139,8 @@ a {
 	padding: 2.5% 6%;
 	margin-top: 5%;
 	width: 40%;
+	max-width: 200px;
+	/* max-height: 100px; */
 }
 
 .banner__btn a {
@@ -149,7 +152,7 @@ a {
 #about,
 #portfolio,
 #skills {
-	height: 80vh;
+	min-height: 150vh;
 	padding-bottom: 5rem;
 	opacity: 0;
 	transition-property: opacity;
@@ -175,9 +178,9 @@ a {
 }
 
 .title p {
-	padding: 2%;
 	text-align: justify;
-	padding: 0 1em;
+	padding: 0 2em;
+	margin-bottom: 25%;
 }
 
 #about h2 {
@@ -185,10 +188,27 @@ a {
 	padding-top: 0;
 }
 
-.about__img {
-	width: 120%;
+.parallax-about {
+	height: 80vh;
+	width: 100%;
+	background-image: url("./images/img1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 5;
+	position: absolute;
+	z-index: 1;
+	margin-top: 5%;
+}
+
+.about__img,
+.portfolio__img {
+	width: 95%;
+	display: flex;
+	justify-items: center;
+	align-items: center;
+	margin: auto;
 	max-width: 1900px;
-	margin-top: 1em;
+	margin-top: 2em;
 }
 
 .top-link {
@@ -225,4 +245,66 @@ footer p {
 	text-transform: capitalize;
 	letter-spacing: var(--spacing);
 	margin-bottom: 0;
+}
+
+@media (min-width: 550px) {
+	.banner {
+		padding: 25% 4% 5% 4%;
+	}
+	.banner__btn {
+		padding: 2.2% 4%;
+	}
+}
+
+@media (min-width: 750px) {
+	.banner {
+		padding: 15% 6% 5% 6%;
+		font-size: 1.1em;
+	}
+	.banner__btn {
+		padding: 2% 4%;
+	}
+
+	.nav-toggle {
+		display: none;
+	}
+	.links-container {
+		height: auto !important;
+	}
+	.links {
+		display: flex;
+		justify-content: space-around;
+		margin: 0;
+	}
+
+	.nav-header {
+		/* display: none; */
+		height: 60px;
+	}
+
+	.portfolio-container {
+		display: grid;
+		justify-content: space-around;
+		grid-template-columns: auto auto;
+	}
+
+	.portfolio__img {
+		width: 95%;
+		max-width: 1900px;
+		margin: 2% auto;
+	}
+}
+
+@media (min-width: 1000px) {
+	.banner {
+		padding: 15% 10% 5% 10%;
+		font-size: 1.2em;
+	}
+	.banner__btn {
+		padding: 1.5% 4%;
+	}
+
+	.links li {
+		padding: 4%;
+	}
 }
