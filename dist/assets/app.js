@@ -18,6 +18,7 @@ toggleBtn.addEventListener('click', () => {
 });
 
 const parallax = document.querySelector('.parallax');
+const parallaxAbout = document.querySelector('.parallax-about');
 const banner = document.querySelector('.banner');
 const aboutSection = document.getElementById('about');
 const portfolioSection = document.getElementById('portfolio');
@@ -46,14 +47,15 @@ window.addEventListener('scroll', function() {
 	if (scroll > aboutPosition - containerHeight) {
 		aboutSection.style.opacity = 1;
 		topLink.classList.add('show-link');
+		parallaxAbout.style.transform = `translate3d(0px, ${scroll * -0.4}px, 0px)`;
 	}
 
-	if (scroll > portfolioPosition - containerHeight) {
+	if (scroll > portfolioPosition - containerHeight + 100) {
 		aboutSection.style.opacity = 0;
 		portfolioSection.style.opacity = 1;
 	}
 
-	if (scroll > skillsPosition - containerHeight) {
+	if (scroll > skillsPosition - containerHeight + 200) {
 		portfolioSection.style.opacity = 0;
 		skillsSection.style.opacity = 1;
 	}
